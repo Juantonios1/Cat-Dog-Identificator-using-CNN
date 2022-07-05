@@ -14,7 +14,6 @@ Cat & Dog Recognizer Using CNN</a>.
     <li><a href="#problem-statement">Problem Statement</a></li>
     <li><a href="#data-understanding">Data Understanding</a></li>
     <li><a href="#data-preprocessing">Data Preprocessing</a></li>
-    <li><a href="#data-analytics">Data Analytics</a></li>
     <li><a href="#modeling">Modeling</a></li>
     <li><a href="#prediction">Prediction</a></li>
     <li><a href="#conclusion">Conclusion and Recommendation</a></li>
@@ -24,54 +23,49 @@ Cat & Dog Recognizer Using CNN</a>.
 
 ## Problem Statement
 **Background :**  
-One of the very popular application in computer vision is Handwritten Digits Classification or Recognition (HDR) in the field of character recognition. Digits like other universal symbols are widely used in technology, bank, OCR, analyzing of digits in engineering, postal service, numbers in plate recognition, etc. There are 10 classes corresponding to the handwritten digits from ‘0’ to ‘9’ which are very depend on the handwritten.
-<br> Source: https://www.ijeter.everscience.org/Manuscripts/Volume-4/Issue-6/Vol-4-issue-6-M-48.pdf
+As computer vision technology advances and mobile camera devices become more widespread, this trend has resulted in an increase in the number of computer vision apps for object detection. Animal detection and recognition are becoming increasingly important in a variety of industries, including animal husbandry, pet care & lost and found, as well as wildlife conservation. It can be happen because of the advancement of computer vision and the availability of affordable photographic equipment enables the automatic recognition of objects.  
+Source: https://hal.archives-ouvertes.fr/hal-03501010/document
 
 **Problem :**  
-Computer can't process directly image input, to process the image input and achieve the goals, we need convert image input to 'something the computer understands'.
+Clasify image of dog or cat is easy for humans, but evidence suggests that cats and dogs are particularly difficult to tell apart automatically. Computer cannot see the image directly but need to convert it into number. The simple method using machine learning didnt give statisfaction result. So we need other algortihm to solve that problem.
 
 **Goals :**  
-Model can convert handwritten digits into machine readable formats.
+Model can differentiate picture between cats and dogs.
 
 **Metrix Evaluation**
-Multiclass Accuracy: Error in each class is important.
+Accuracy: Error in each class is important.
 
 ## Data Understanding
 
-All dataset based on <a href=https://www.kaggle.com/competitions/digit-recognizer/data> MNIST Number Dataset</a>. Sample Data:
+All dataset based on <a href=https://www.kaggle.com/datasets/chetankv/dogs-cats-images> MNIST Number Dataset</a>. Sample Data:
 
-![sample data](Image/sample.png)
-
-* Data Train: Contain 42000 images. Each image has 1 label and pixels with height 28 pixels and width 28 pixels.
-* Data Test: Contain 28000 images. Each row pixels with height 28 pixels and width 28 pixels.
+* Data Train: Contain 4000 images of cats and 4000 images of dogs.
+* Data Test: Contain 1000 images of cats and 1000 images of dogs.
 
 ## Data Preprocessing
 At this stage, data preparation and processing will be carried out before being used as a data model, as follows:
 * Normalization.
-* Shuffle Dataset.
-* Splitting.
+* Batching.
 
 ## Modeling
 At this stage will be done making and optimizing the deep learning model, as follows:
 * Baseline.
 * Adjust parameter on model.
-  * Batch.
-  * Epoch.
-  * Hidden Layer.
-  * Regularization.
-  * Optimizer.
   * Learning Rate.
-* Hyperparameter Tuning.
+  * Data Augmentation.
+  * Increase Hidden Unit.
+  * Increase Hidden Layers.
+  * Increase Epochs.
 
 ## Prediction
 At this stage there will be try model to predict several sample:
-* Sample Data from Datatest:
+* Prediction test 1:
 
-![dataset_prediction](Image/pred_sample.png)
+![test1](Image/cat.png)
 
-* Handwriting Sample
+* Prediction test 2:
 
-![handwriting_sample](Image/hw_sample.png)
+![test2](Image/dog.png)
 
 ## Conclusion 
 We conclude our result and give recommendation based on it
@@ -89,19 +83,11 @@ We conclude our result and give recommendation based on it
 ![Confussion_Metrix](Image/cm.png)  <br>
 
 * Conclusion
-  * This model can differentiate single number based on input picture, but there are some limitation such as:
-      * Model hard to differentiate the different style of number.
-      * The position number on pictre is important.
-      * Model only prefectly predict particular number (1,2,3,6).
-      * Model can only predict number with white color and black background color.
-  * Overall Artificial Neural Network can be used to Computer Vision, but its **not recommended**.
-
-* Recommendation
-  * Use **Convolutional Neural Network (CNN)** for Computer Vision.
+  * Overall Convolution Neural Network can be used to differentiate image of cats and dogs.
  
 
-For full report of this project, please visit <a href=https://github.com/Juantonios1/Digit-Recognizer-Using-ANN/blob/main/Digit%20Recognizer%20Ipynb/Digit%20Recognizer%20Using%20Artificial%20Neural%20Network.ipynb>
-Digit Recognizer Using Artificial Neural Network</a>.
+For full report of this project, please visit <a href=https://github.com/Juantonios1/Cat-Dog-Identificator-using-CNN/blob/main/Cat%20%26%20Dog%20Identificator%20.Ipynb/Cat%20%26%20Dog%20Identificator%20Using%20Computer%20Vision%20with%20CNN.ipynb>
+Cat & Dog Recognizer Using CNN</a>.
 
 ## Contributors:
 Juan Antonio Suwardi - antonio.juan.suwardi@gmail.com  
