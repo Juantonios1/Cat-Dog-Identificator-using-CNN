@@ -32,8 +32,8 @@ Clasify image of dog or cat is easy for humans, but evidence suggests that cats 
 **Goals :**  
 Model can differentiate picture between cats and dogs.
 
-**Metrix Evaluation**
-Accuracy: Error in each class is important.
+**Metrix Evaluation :**
+<br> Accuracy: Error in each class is important.
 
 ## Data Understanding
 
